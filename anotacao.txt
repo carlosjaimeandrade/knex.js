@@ -1,4 +1,5 @@
 ** Knex ele monta query basicamente é a forma literal de escrever query + ORM
+http://knexjs.org/guide/
 
 Para instalação 
 *npm install knex

@@ -10,9 +10,15 @@ const dados = [{
 }
 ]
 
+//inserindo
 database.insert(dados).into("games").then(data=>{
     console.log(data)
 }).catch(err=>{
     console.log(err)
 })
 
+
+//consultando
+database.select().from("games").then(data=>{ //ou select().table('games')
+    console.log(data)
+})

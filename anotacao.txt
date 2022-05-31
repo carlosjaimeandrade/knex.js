@@ -1,9 +1,13 @@
-o knex ele monta query basicamente é a forma literal de escrever query + ORM
+** Knex ele monta query basicamente é a forma literal de escrever query + ORM
 
-para instalação 
+Para instalação 
+*npm install knex
+*para cada tipo de banco deve baixar sua dependencia por exemplo mysql o "mysql2"
+*npm install mysql2
 
-npm install knex
+Importantes
+* o query builder sempre trabalha com promisses então poderemos trabalhar com .then ou async await com
+* no insert você pode passar um dado de obj ou um array de obj para adiconar multiplos dados no banco
 
-para cada tipo de banco deve baixar sua dependencia por exemplo mysql o "mysql2"
-
-npm install mysql2
+Comandos
+* query.toQuery() - no valor de um montagem de uma query podemos usar o Toquery para ver a query literal se

@@ -1,0 +1,9 @@
+o knex ele monta query basicamente é a forma literal de escrever query + ORM
+
+para instalação 
+
+npm install knex
+
+para cada tipo de banco deve baixar sua dependencia por exemplo mysql o "mysql2"
+
+npm install mysql2

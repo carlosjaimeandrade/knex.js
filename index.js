@@ -43,7 +43,12 @@ database.update({nome : "Resident evil", preco: 548}).from('games').where({id:2}
     console.log(data)
 })
 
-//order by
+/* //order by
 database.select().table('games').orderBy("id",'desc').then(dados=>{
     console.log(dados)
-});
+}); */
+
+//join
+database.select(['games.nome','estudios.nome']).table('estudios').innerJoin('games','games.id', 'estudios.id').then(data=>{
+    console.log(data)
+})

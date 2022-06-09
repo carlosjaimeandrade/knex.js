@@ -42,3 +42,8 @@ database.delete().from('games').where({id:1}).then(data=>{
 database.update({nome : "Resident evil", preco: 548}).from('games').where({id:2}).then(data=>{
     console.log(data)
 })
+
+//order by
+database.select().table('games').orderBy("id",'desc').then(dados=>{
+    console.log(dados)
+});

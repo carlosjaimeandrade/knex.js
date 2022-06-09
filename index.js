@@ -39,7 +39,7 @@ database.delete().from('games').where({id:1}).then(data=>{
 })
 
 //update
-database.update({nome : "Resident evil", preco: 548}).from('games').where({id:2}).then(data=>{
+database.update({nome : "Resident evil", preco: 548}).from('games').then(data=>{
     console.log(data)
 })
 
@@ -49,6 +49,6 @@ database.select().table('games').orderBy("id",'desc').then(dados=>{
 }); */
 
 //join
-database.select(['games.nome','estudios.nome']).table('estudios').innerJoin('games','games.id', 'estudios.id').then(data=>{
+database.select(['games.nome','estudios.nome']).table('estudios').innerJoin('games','games.id', 'estudios.id').where({'games.id':2}).then(data=>{;
     console.log(data)
 })

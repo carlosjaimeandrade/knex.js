@@ -53,3 +53,15 @@ database.select(['games.nome','estudios.nome']).table('estudios').innerJoin('gam
     console.log(data)
 })
 
+//transactions https://www.youtube.com/watch?v=jfvnHWVJz-E
+//COMMIT consolidação de transação
+//ROLLBACK TRANSAÇÃO TOTALMENTE DESFEITA
+//NO MYSQL ELE É AUTO COMMIT ele atualiza atomaticamente apos os comando DE CRUD
+//DESATIVANDO
+//SET @@autocommit = OFF
+//SELECT @@autocommit;
+
+//iniciando transaction
+//START TRANSACTION
+    //CODIGO QUERY
+//ROLLBACK

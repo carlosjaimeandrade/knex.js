@@ -48,7 +48,8 @@ database.select().table('games').orderBy("id",'desc').then(dados=>{
     console.log(dados)
 }); */
 
-//join
+//join 1 - 1 // 1 - M
 database.select(['games.nome','estudios.nome']).table('estudios').innerJoin('games','games.id', 'estudios.id').where({'games.id':2}).then(data=>{;
     console.log(data)
 })
+
